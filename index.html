@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#064b9b">
+
+    <title>InCom Opérations</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+<header class="app-header">
+
+    <div class="logo">InCom</div>
+
+    <div>
+        <h1>InCom GROUP OPÉRATIONS</h1>
+        <p>Gestion de la Production et de la Logistique</p>
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- =========================
+         ACCUEIL
+    ========================== -->
+
+    <section id="homeScreen"
+             class="screen active">
+
+        <div class="card welcome">
+
+            <div class="icon">⚙️</div>
+
+            <h2>InCom Opérations</h2>
+
+            <p>
+                Gestion du matériel,
+                calcul automatique des besoins
+                et demandes de matériel.
+            </p>
+
+            <button class="primary-btn"
+                    onclick="goToPostes()">
+
+                CONTINUER
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         POSTE
+    ========================== -->
+
+    <section id="posteScreen"
+             class="screen">
+
+        <div class="card">
+
+            <h2>Choisir le Poste</h2>
+
+            <p class="subtitle">
+                Sélectionnez le poste concerné.
+            </p>
+
+            <div id="posteList"
+                 class="button-list">
+            </div>
+
+            <button class="back-btn"
+                    onclick="goHome()">
+
+                ← Retour
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RESPONSABLE
+    ========================== -->
+
+    <section id="responsableScreen"
+             class="screen">
+
+        <div class="card">
+
+            <h2>Choisir le Responsable</h2>
+
+            <p class="subtitle"
+               id="selectedPosteText">
+            </p>
+
+            <div id="responsableList"
+                 class="button-list">
+            </div>
+
+            <button class="back-btn"
+                    onclick="goToPostes()">
+
+                ← Retour
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJET
+    ========================== -->
+
+    <section id="projetScreen"
+             class="screen">
+
+        <div class="card">
+
+            <h2>Choisir le Projet</h2>
+
+            <p class="subtitle">
+
+                Responsable :
+                <strong id="selectedResponsableText"></strong>
+
+            </p>
+
+            <div id="projetList"
+                 class="project-list">
+            </div>
+
+            <button class="back-btn"
+                    onclick="goToResponsables()">
+
+                ← Retour
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALCUL
+    ========================== -->
+
+    <section id="calculScreen"
+             class="screen">
+
+        <div class="card">
+
+            <h2>Calcul automatique</h2>
+
+            <div id="selectionInfo"
+                 class="selection-info">
+            </div>
+
+            <div id="calculationResult">
+            </div>
+
+            <button class="primary-btn"
+                    onclick="showDemande()">
+
+                🧾 DEMANDE DE MATÉRIEL
+
+            </button>
+
+            <button class="back-btn"
+                    onclick="goToProjets()">
+
+                ← Retour
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DEMANDE
+    ========================== -->
+
+    <section id="demandeScreen"
+             class="screen">
+
+        <div class="card">
+
+            <div id="demandeDocument"
+                 class="document">
+            </div>
+
+            <div class="export-buttons">
+
+                <button onclick="saveImage()">
+                    📷 Image
+                </button>
+
+                <button onclick="savePDF()">
+                    📄 PDF
+                </button>
+
+                <button onclick="printDemande()">
+                    🖨️ Imprimer
+                </button>
+
+                <button onclick="shareDemande()">
+                    📤 Partager
+                </button>
+
+                <button onclick="shareWhatsApp()">
+                    💬 WhatsApp
+                </button>
+
+            </div>
+
+            <button class="back-btn"
+                    onclick="goToCalcul()">
+
+                ← Retour
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
