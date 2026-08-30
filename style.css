@@ -1,0 +1,432 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f5f8;
+    color: #222;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.app-header {
+    background: #064b9b;
+    color: white;
+    padding: 18px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: white;
+    color: #064b9b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.app-header h1 {
+    font-size: 19px;
+}
+
+.app-header p {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 15px;
+}
+
+
+/* =========================
+   SCREENS
+========================= */
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.card h2 {
+    color: #064b9b;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.welcome .icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.welcome h2 {
+    font-size: 25px;
+}
+
+.welcome p {
+    color: #666;
+    line-height: 1.6;
+    margin: 12px 0 20px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    width: 100%;
+    min-height: 50px;
+    border: none;
+    border-radius: 11px;
+    margin-top: 10px;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: #064b9b;
+    color: white;
+}
+
+.back-btn {
+    background: #777;
+    color: white;
+}
+
+.button-list button {
+    background: #064b9b;
+    color: white;
+    text-align: left;
+}
+
+.project-list button {
+    background: white;
+    color: #064b9b;
+    border: 2px solid #064b9b;
+    text-align: left;
+}
+
+button:active {
+    transform: scale(.98);
+}
+
+
+/* =========================
+   SELECTION INFO
+========================= */
+
+.selection-info {
+    background: #eef5ff;
+    border-left: 4px solid #064b9b;
+    padding: 13px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    min-width: 720px;
+    font-size: 12px;
+}
+
+th {
+    background: #064b9b;
+    color: white;
+    padding: 10px 6px;
+    border: 1px solid #064b9b;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 9px 6px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+td:first-child {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.material-code {
+    font-size: 10px;
+    color: #777;
+    margin-top: 3px;
+}
+
+
+/* =========================
+   DEMANDE
+========================= */
+
+.document {
+    background: white;
+    padding: 15px;
+}
+
+.document-header {
+    text-align: center;
+    border-bottom: 2px solid #064b9b;
+    padding-bottom: 15px;
+}
+
+.document-header h2 {
+    color: #064b9b;
+    font-size: 22px;
+}
+
+.document-header p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.document-meta {
+    margin-top: 15px;
+    padding: 12px;
+    background: #f6f8fb;
+    border-radius: 8px;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+.document-meta strong {
+    color: #064b9b;
+}
+
+
+/* =========================
+   ROULEAUX DETAILS
+========================= */
+
+.roll-details {
+    margin-top: 18px;
+    background: #eef5ff;
+    border-left: 4px solid #064b9b;
+    border-radius: 8px;
+    padding: 13px;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+.roll-details strong {
+    color: #064b9b;
+}
+
+
+/* =========================
+   EXPORT
+========================= */
+
+.export-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.export-buttons button {
+    margin-top: 0;
+    background: #064b9b;
+    color: white;
+}
+
+.export-buttons button:nth-child(2) {
+    background: #333;
+}
+
+.export-buttons button:nth-child(3) {
+    background: #555;
+}
+
+.export-buttons button:nth-child(4) {
+    background: #064b9b;
+}
+
+.export-buttons button:nth-child(5) {
+    background: #075e54;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .app-header {
+        padding: 15px 10px;
+    }
+
+    .logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .app-header h1 {
+        font-size: 16px;
+    }
+
+    .app-header p {
+        font-size: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+        border-radius: 13px;
+    }
+
+    .card h2 {
+        font-size: 19px;
+    }
+
+    .welcome {
+        margin-top: 20px;
+    }
+
+    .welcome .icon {
+        font-size: 42px;
+    }
+
+    .export-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================
+   A4 PRINT
+========================= */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .app-header,
+    .export-buttons,
+    .back-btn,
+    .primary-btn {
+        display: none !important;
+    }
+
+    .screen {
+        display: none !important;
+    }
+
+    #demandeScreen {
+        display: block !important;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+
+    .card {
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .document {
+        padding: 0;
+    }
+
+    table {
+        min-width: 0;
+        width: 100%;
+        font-size: 9px;
+    }
+
+    th {
+        background: #064b9b !important;
+        color: white !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+}
